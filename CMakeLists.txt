@@ -26,7 +26,7 @@ find_package(catkin REQUIRED COMPONENTS
 
 add_service_files(
   FILES
-  ddrl_service_planning.srv
+  draca_service_planning.srv
 )
 
 

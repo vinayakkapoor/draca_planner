@@ -5,12 +5,12 @@ import os
 
 from torch import angle
 import rospy
-from draca_planner.srv import ddrl_service_planning, ddrl_service_planningResponse
+from draca_planner.srv import draca_service_planning, draca_service_planningResponse
 from handle_draca_planner import HandleDraca_planner 
 
 def handle_draca_planner(req, handler):
     x_velocity, y_velocity, angle = handler.calcVelocity(req.px, req.py, req.vx, req.vy, req.radius, req.pgx, req.pgy, req.v_pref, req.theta, req.px1, req.py1, req.vx1, req.vy1, req.radius1)
-    return ddrl_service_planningResponse(x_velocity, y_velocity, angle)
+    return draca_service_planningResponse(x_velocity, y_velocity, angle)
 
 def initialise():
     parser = argparse.ArgumentParser('Parse configuration file')
@@ -42,7 +42,7 @@ def draca_planner_server():
     handle_draca_planner_lambda = lambda req : handle_draca_planner(req, h)
 
     print("Starting planning service for draca_planner..")
-    s = rospy.Service('ddrl_service_planning', ddrl_service_planning, handle_draca_planner_lambda)
+    s = rospy.Service('draca_service_planning', draca_service_planning, handle_draca_planner_lambda)
     
     print("Ready to serve flight!")
     rospy.spin()

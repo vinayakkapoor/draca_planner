@@ -63,7 +63,7 @@ void Draca_plannerController::initialize(const ros::NodeHandle& parent_nh, const
   }
   std::cout << "initialised goal as: (" << serv.request.pgx << "," << serv.request.pgy << ")" << std::endl;
   serv.request.radius1 = serv.request.radius;
-  serviceClient = nh.serviceClient<draca_planner::ddrl_service_planning>("/ddrl_service_planning",true);
+  serviceClient = nh.serviceClient<draca_planner::draca_service_planning>("/draca_service_planning",true);
   std::cout<< "planning service available: " << serviceClient.exists() << std::endl;
 
   // | ------------------ initialize subscribers ----------------- |
@@ -173,7 +173,7 @@ std::optional<std::any> Draca_plannerController::update(std::shared_ptr<swm_ctrl
     serv.request.vx = globalLinearVel_self.x;
     serv.request.vy = globalLinearVel_self.y;
 
-    // std::cout << std::endl << std::endl << std::endl << "inside ddrl_controller " << std::endl;
+    // std::cout << std::endl << std::endl << std::endl << "inside draca_controller " << std::endl;
 
     /*double roll = 0.0;
     double pitch = 0.0;

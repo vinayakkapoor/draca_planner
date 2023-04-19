@@ -62,7 +62,7 @@
 #include <swarm_utils/ros_utils.h>
 #include <chrono>
 
-#include "draca_planner/ddrl_service_planning.h"
+#include "draca_planner/draca_service_planning.h"
 
 //}
 
@@ -118,7 +118,7 @@ namespace draca_planner
 
       bool correctAlt = false;
 
-      draca_planner::ddrl_service_planning serv;
+      draca_planner::draca_service_planning serv;
       
 
       //}
