@@ -1,0 +1,5 @@
+<library path="lib/libDraca_plannerController">
+  <class name="draca_planner/Draca_plannerController" type="draca_planner::Draca_plannerController" base_class_type="swarm_control_manager::SwarmController">
+    <description>Draca_planner controller nodelet</description>
+  </class>
+</library>

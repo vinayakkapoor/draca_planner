@@ -1,0 +1,15 @@
+Draca_plannerController:
+  address: "draca_planner/Draca_plannerController"
+  ros_name_space: "draca_planner"
+
+  required_data:
+    self_data: []
+    neighbor_data: []
+
+  neighbor_localization: 'shared_gps'
+  # neighbor_localization: 'uvdar'
+  control_type: 'velocity'
+
+controller_names: ['Draca_plannerController']
+
+initial_controller: 'Draca_plannerController'
