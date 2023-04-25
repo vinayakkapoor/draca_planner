@@ -21,7 +21,7 @@ With `draca_planner`, users can easily incorporate deep reinforcement learning a
 
 ## Setting up and running the project
 
-  The project uses the *swarm_control_manager* which is currently under testing and to be open sourced soon. Till then, please head to draca_ros to install and test the package as a **singularity container**.
+  The project uses the *swarm_control_manager* which is currently under testing and to be open sourced soon. Till then, please head to [draca_ros](https://github.com/vinayakkapoor/draca_ros) to install and test the package as a **singularity container**.
 
 
   
